@@ -17,6 +17,6 @@ RUN Invoke-WebRequest https://download.microsoft.com/download/4/3/B/43B61315-B2C
 	Start-Process framework452.exe -ArgumentList '/q' -Wait; `
 	Remove-Item -Force framework452.exe
 	
-#Certs
-COPY .\Certs C:\CertsSource
-RUN "C:\CertsSource\InstallAllCerts.ps1"	
+#Certs - These certs will be installed in a later process, not part of a public Git repo.
+#COPY .\Certs C:\CertsSource
+#RUN "C:\CertsSource\InstallAllCerts.ps1"	
